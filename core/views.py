@@ -10,7 +10,8 @@ from .models import Profile,Post
 def index(request):
     user_object = User.objects.get(username = request.user.username)
     user_profile = Profile.objects.get(user=user_object)
-    return render(request,'index.html',{'user_profile' : user_profile})
+    posts = Post.objects.all()
+    return render(request,'index.html',{'user_profile' : user_profile,'posts':posts})
 
 @login_required(login_url='signin')
 def settings(request):
@@ -55,7 +56,6 @@ def upload(request):
 
 
     return HttpResponse('<h1>Upload view </h1>')
-
 
 def signup(request):
     if request.method == 'POST':
