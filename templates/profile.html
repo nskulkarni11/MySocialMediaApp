@@ -46,7 +46,6 @@
 					<span style="color: white; font-size: 27px;"><b>{{user_followers}} followers</b></span>
 					{% endif %}
 
-
 					<span style="color: white; font-size: 27px;"><b>{{user_following}} following</b></span>
 
 					<input type="hidden" value="{{user.username}}" name="follower" />
@@ -55,6 +54,7 @@
 					{% if user_object.username == user.username %}
 					<a href="/settings" data-ripple="">Account Settings</a>
 					{% else %}
+					<!-- <a data-ripple=""><button type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">{{button_text}}</button></a> -->
 					<a data-ripple=""><button type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">{{button_text}}</button></a>
 					{% endif %}
 
@@ -126,22 +126,11 @@
 					<div class="col-lg-12">
 						<div class="row" id="page-contents">
 							<div class="col-lg-3">
-								<aside class="sidebar static">
-									
+								<aside class="sidebar static">				
 									
 									
 								</aside>
 							</div><!-- sidebar -->
-							
-
-
-
-
-
-
-
-
-
 							<div class="col-lg-6">
 								<div class="central-meta">
 									<ul class="photos">
